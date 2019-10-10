@@ -2,21 +2,17 @@
 #include <iostream>
 using namespace std;
 
-bool isPalindrome(const string& str){
-    int length = str.length();
-    if(length < 2){
+bool isPalindrome(const string& str) {
+
+    int n = str.length();
+
+    if (n < 2) {                        //returns true if string is empty or single character
         cout << "true" << endl;
         return true;
-    }else if(str[0] != str[str.length()-1]){
+    } else if (str[0] != str[n - 1]) {       //returns false if first and last letters are different
         cout << "false" << endl;
         return false;
     }else{
-        if(str.at(1) == str.at(length-2)){
-            cout << "true" << endl;
-            return isPalindrome(str);
-        }else{
-            cout << "false" << endl;
-            return false;
-        }
+        return isPalindrome(str.substr(1,n-2));         //using substring and recursion to traverse string
     }
 }
