@@ -13,6 +13,6 @@ bool isPalindrome(const string& str) {
         cout << "false" << endl;
         return false;
     }else{
-        return isPalindrome(str.substr(1,n-2));         //using substring and recursion to traverse string
-    }
+        return isPalindrome(str.substr(1,n-2));         //using substring and recursion to traverse
+    }                                                                //the rest of the string
 }
