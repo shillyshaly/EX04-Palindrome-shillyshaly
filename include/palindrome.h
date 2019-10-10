@@ -1,7 +1,3 @@
-//
-// Created by aknight on 10/6/19.
-//
-
 #ifndef EX04_PALINDROME_PALINDROME_H
 #define EX04_PALINDROME_PALINDROME_H
 
